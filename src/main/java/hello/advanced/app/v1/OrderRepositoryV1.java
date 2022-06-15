@@ -32,7 +32,11 @@ public class OrderRepositoryV1 {
         }
     }
 
-    private void sleep(int millis){
-
+    private void sleep(int millis) {
+        try {
+            Thread.sleep(millis);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
     }
 }
